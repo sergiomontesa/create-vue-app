@@ -240,10 +240,10 @@ pnpm add vue-i18n
 pnpm add tailwindcss @tailwindcss/vite
 touch tailwind.config.js
 mkdir -p src/assets/css
-touch src/assets/css/tailwind.css
+echo "@import 'tailwindcss';" > src/assets/css/tailwind.css
 ```
 
-Asegúrate que el fichero `tailwind.config.js` tiene el siguiente contenido:
+Aunque este punto no es estrictamente necesario con Tailwind CSS 4, asegúrate que el fichero `tailwind.config.js` tiene el siguiente contenido:
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
@@ -338,7 +338,7 @@ Edita el fichero `.prettierrc.json` para configurar Prettier. La siguiente propu
   "$schema": "https://json.schemastore.org/prettierrc",
   "arrowParens": "always",
   "bracketSpacing": true,
-  "endOfLine": "auto",
+  "endOfLine": "lf",
   "printWidth": 140,
   "quoteProps": "as-needed",
   "semi": false,
